@@ -1,0 +1,11 @@
+name: env-demo
+on: push
+      # workflow level: every job sees it
+jobs:
+  build:
+    runs-on: ubuntu-latest
+   # job level: every step in this job
+    steps:
+      - name: Print region
+        run: echo ${{ vars.DEPLOY_REGION }}
+

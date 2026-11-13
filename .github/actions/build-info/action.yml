@@ -1,0 +1,17 @@
+name: 'Displaying Info'
+description: 'Build info'
+
+runs:
+  using: composite
+  steps:
+    - name: Print branch
+      run: echo $GITHUB_REF
+      shell: bash
+
+
+    - name: Print commit
+      run: echo $GITHUB_SHA
+      shell: bash
+
+
+

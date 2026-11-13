@@ -1,0 +1,13 @@
+name: 'Displaying app'
+description: 'app name'
+inputs:
+  app-name:  
+    description: "app-name"
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - name: Print app name
+      run: echo ${{ inputs.app-name }}
+      shell: bash

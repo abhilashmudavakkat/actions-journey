@@ -1,0 +1,12 @@
+on: [push]
+
+jobs:
+  announce-job:
+    runs-on: ubuntu-latest
+    name: Job to print app name
+    steps:
+      - uses: actions/checkout@v6
+      - name: calling local action
+        uses: ./.github/actions/announce/
+        with:
+          app-name: pixelpost
